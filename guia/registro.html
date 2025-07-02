@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Pacifico&family=Raleway:ital,wght@0,100..900;1,100..900&family=Schoolbell&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/registro.css">
+    <link rel="icon" href="/Assets/logo_user.ico" type="image/x-icon" sizes="16x16">
+</head>
+<body>
+    <header>
+    <h1>Bienvenido</h1>
+    <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="restaurante.html">Restaurante</a>
+        <a href="hoteles.html">Hoteles</a>  
+        </div>
+    </nav>
+    </header>
+    <p>Elige una opción para continuar</p>
+    <div class="button-container">
+        
+        <button id="registro-btn">Registro</button>
+        <button id="login-btn">Inicio de Sesión</button>
+    </div>
+    
+    <!-- Formulario de registro -->
+    <form id="registro-form" class="hidden" action="conexion_registro.php" method="post">
+        <h2>Registro de Cliente</h2>
+        <table>
+            <tr>
+                <td><label for="nombre">Nombre</label></td>
+                <td><input type="text" id="nombre" name="nombre" placeholder="Nombre" required></td>
+            </tr>
+            <tr>
+                <td><label for="apellido">Apellido</label></td>
+                <td><input type="text" id="apellido" name="apellido" placeholder="Apellido" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Correo Electrónico</label></td>
+                <td><input type="email" id="email" name="email" placeholder="@gmail.com" required></td>
+            </tr>
+            <tr>
+                <td><label for="telefono">Teléfono</label></td>
+                <td><input type="number" id="telefono" name="telefono" placeholder="Escriba su telefono" required></td>
+            </tr>
+            <tr>
+                <td><label for="fnacimiento">Fecha de Nacimiento</label></td>
+                <td><input type="date" id="fnacimiento" name="fnacimiento" required></td>
+            </tr>
+            <tr>
+                <td><label for="comentarios">Comentarios</label></td>
+                <td><textarea id="comentarios" name="comentarios" rows="4" placeholder="Deje un comentario"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button type="submit">Registrar</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    
+    <!-- Formulario de inicio de sesión -->
+    <form id="login-form" class="hidden" action="conexion_login.php" method="post">
+        <h2>Inicio de Sesión</h2>
+        <table>
+            <tr>
+                <td><label for="login-email">Correo Electrónico</label></td>
+                <td><input type="email" id="login-email" name="email" placeholder="@gmail.com" required></td>
+            </tr>
+            <tr>
+                <td><label for="login-password">Contraseña</label></td>
+                <td><input type="password" id="login-password" name="password" placeholder="Contraseña" required></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button type="submit">Iniciar Sesión</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        const registroBtn = document.getElementById('registro-btn');
+        const loginBtn = document.getElementById('login-btn');
+        const registroForm = document.getElementById('registro-form');
+        const loginForm = document.getElementById('login-form');
+
+        registroBtn.addEventListener('click', () => {
+            registroForm.classList.remove('hidden');
+            loginForm.classList.add('hidden');
+        });
+
+        loginBtn.addEventListener('click', () => {
+            loginForm.classList.remove('hidden');
+            registroForm.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
+</body>
+</html>
