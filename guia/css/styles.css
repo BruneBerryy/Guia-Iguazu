@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(186, 240, 200);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  color: black;
+  background-color: rgb(92, 161, 106);
+  color: #ffffff;
+  
+}
+
+#logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  flex: 1;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  color: #ffffff;
+}
+
+.menu a {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  color: #ffffff;
+}
+
+.menu a:hover {
+  background-color: rgb(186, 240, 200);
+}
+
+/* ACTIVIDADES */
+main {
+  flex: 1;
+}
+
+.actividades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  column-gap: 280px;
+  row-gap: 50px;
+  padding: 50px;
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.primer-subtitulo {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 20px;
+  color: #ffffff;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.actividad {
+  perspective: 1000px;
+  height: 300px;
+}
+
+.contenido {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.actividad:hover .contenido {
+  transform: rotateY(180deg);
+}
+
+.frente, .atras {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 102, 153, 0.2);
+}
+
+.frente {
+  background: rgb(126, 190, 141);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.frente img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.frente h3 {
+  margin: 10px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.atras {
+  background: radial-gradient(rgb(255, 255, 255), rgb(186, 240, 200), rgb(126, 190, 141));
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  text-align: center;
+}
+
+.imagen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 18%;
+  text-align: center;
+}
+
+.imagen img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.imagen h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.imagen p {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  color: #333;
+}
+
+#grupo-imagenes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 40px;
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+h3, h2, p {
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+/* REDES SOCIALES */
+
+.texto-redes {
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.redes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.1rem;
+}
+
+/* FOOTER */
+footer {
+  padding: 15px;
+  border-top: 2px solid #ffffff;
+  color: rgb(255, 255, 255);
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  list-style-type: none;
+  background-color: rgb(92, 161, 106);
+}
+
